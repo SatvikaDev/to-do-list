@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>To-Do List</h1>
+        <input type="text" id="i" placeholder="Enter Task">
+        <ul id="tasks"></ul>
+        <div class="button">
+        <button id="add">Add</button>
+        </div>
+    </body>
+    <script>
+        const add=document.getElementById("add");
+
+add.addEventListener("click",()=>{
+
+const tasks=document.getElementById("tasks");
+const i=document.getElementById("i");
+
+const ul=document.createElement("ul");
+const li=document.createElement("li");
+
+li.textContent=i.value;
+
+const inp=document.createElement("input");
+inp.type="checkbox";
+
+inp.addEventListener("change",()=>{
+if(inp.checked){
+li.style.textDecoration="line-through";
+}
+else{
+li.style.textDecoration="none";
+}
+});
+
+const db=document.createElement("button");
+db.textContent="X";
+
+db.addEventListener("click",()=>{
+li.remove();
+});
+
+li.appendChild(inp);
+li.appendChild(db);
+ul.appendChild(li);
+tasks.appendChild(ul);
+
+});
+    </script>
+</html>
