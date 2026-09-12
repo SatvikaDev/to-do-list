@@ -35,5 +35,3 @@ A simple To-Do List web app built using **HTML, CSS, and JavaScript**.
 
 **Satvika Dev**
 GitHub: [@satvikadev](https://github.com/satvikadev)
-
-⭐ If you like this project, consider giving it a star!
